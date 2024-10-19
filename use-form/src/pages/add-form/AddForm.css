@@ -1,0 +1,102 @@
+/* Apply background color and animation to the entire body */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Background color */
+  }
+  
+  /* Background animation for the entire body */
+  body::before {
+    content: '';
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    z-index: -1; /* Behind all content */
+    animation: backgroundAnimation 10s linear infinite; /* Background animation */
+  }
+  
+  /* Keyframes for background animation */
+  @keyframes backgroundAnimation {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+padding-top: 10px;
+    min-height: 100vh;
+   
+  }
+  
+  /* Form styling */
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    width: 100%; /* Adjusts the form width */
+    max-width: 500px; /* Maximum width to ensure it looks good on larger screens */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-input {
+    width: 100%; /* Full width of the form */
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    border-color: #7a42f4;
+    box-shadow: 0 0 8px rgba(122, 66, 244, 0.5);
+  }
+  
+  .custom-btn {
+    width: 100%; /* Button will also be full width */
+    padding: 15px;
+    background-color: #7a42f4;
+    color: white;
+    font-size: 1.1rem; /* Slightly larger font for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #5a30d0;
+  }
+  
+  /* Error Message Styling */
+  .errors {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .custom-form {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .custom-btn {
+      font-size: 1rem;
+    }
+  }
+  

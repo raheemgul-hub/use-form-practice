@@ -1,0 +1,58 @@
+/* Scoped styles for this component only */
+.scoped-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height for the container */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  position: relative;
+  overflow: hidden;
+}
+
+.scoped-content {
+  text-align: center;
+  color: white;
+  animation: custom-fadeIn 3s ease-in-out;
+}
+
+.custom-main-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: custom-moveUp 3s ease-in-out;
+}
+
+.custom-sub-heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 20px;
+  animation: custom-fadeIn 5s ease-in-out;
+}
+
+/* Background animation specific to this component */
+.scoped-container::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,0,0,0.1), rgba(0,0,0,0));
+  animation: custom-backgroundAnimation 10s linear infinite;
+}
+
+/* Keyframe animations (scoped to this component) */
+@keyframes custom-backgroundAnimation {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes custom-moveUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes custom-fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
