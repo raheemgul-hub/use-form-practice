@@ -5,6 +5,7 @@ import Home from './pages/home/home';
 import AddTable from './pages/add-table/AddTable';
 import LayoutPage from './pages/layoutpage/LayoutPage';
 import AddForm from './pages/add-form/AddForm';
+import Employee from './pages/employee-axios/Emloyee';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<LayoutPage />}></Route>
           <Route path='addform' element={<AddForm />}></Route>
           <Route path='addtable' element={<AddTable />}></Route>
+          <Route path='employee' element={<Employee />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

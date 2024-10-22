@@ -10,7 +10,7 @@ function Home() {
                     <Link to='/addtable'><li>Employees-Table</li></Link>
 
 
-                    <li><a href="/departments">Departments</a></li>
+                    <Link to='/employee'><li>Employees-axios </li></Link>
                     <li><a href="/reports">Reports</a></li>
                     <li><a href="/settings">Settings</a></li>
                 </ul>
