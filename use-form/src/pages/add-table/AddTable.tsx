@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./AddTable.css";
 function AddTable() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [Data, setData] = useState<any[]>([]);
 
   useEffect(() => {
